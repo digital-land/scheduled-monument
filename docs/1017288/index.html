@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en" class="govuk-template ">
+  <head>
+    <meta charset="utf-8">
+    <title>Section of Wansdyke and associated monuments from east of The Firs to the eastern side of Tan Hill | Scheduled-monument | Digital Land</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#0b0c0c">     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="shortcut icon" sizes="48x48" href="/images/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" sizes="32x32" href="/images/favicon-32x32.png" type="image/png">
+<link rel="shortcut icon" sizes="16x16" href="/images/favicon-16x16.png" type="image/png">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+	<meta name="digital-land:template" content="page-per-thing/record.html"><!-- should make this optional, no need to load if not showing a map -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+crossorigin="" />
+
+<!-- Make sure you put this AFTER Leaflet's CSS -->
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+	integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+	crossorigin=""></script>
+
+<!-- assets needed for fullscreen maps -->
+<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
+<link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
+
+<!-- script needed for recentring map -->
+<script src="https://digital-land.github.io/javascripts/Leaflet.recentre.js"></script>
+
+<script src="https://digital-land.github.io/javascripts/dl-maps.js"></script>	<link href="https://digital-land.github.io/stylesheets/dl-frontend.css" rel="stylesheet" />    <meta property="og:image" content="/images/govuk-opengraph-image.png">
+  </head>
+  <body class="govuk-template__body ">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+      <a href="#main-content" class="govuk-skip-link">Skip to main content</a>
+
+<!-- Cookie banner partial version 1.0.1 -->
+<div id="global-cookie-message" class="govuk-clearfix global-cookie-message" data-module="cookie-banner" role="region" aria-label="cookie banner" data-nosnippet="">
+
+  <div id="cookie-banner" class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <div class="cookie-banner__message govuk-!-margin-top-6">
+          <h2 class="govuk-heading-m">Tell us whether you accept cookies</h2>
+          <p class="govuk-body">We use <a class="govuk-link" href="/cookies">cookies to collect information</a> about how you use the Digital Land website to make the website work as well as possible.</p>
+        </div>
+        <div class="cooke-banner__buttons govuk-grid-row">
+          <div class="govuk-grid-column-one-half">
+            <button class="govuk-button" onclick="acceptCookies();showCookieConfirmation();">Accept all cookies</button>
+          </div>
+          <div class="govuk-grid-column-one-half">
+            <a class="govuk-button" href="/cookies">Set cookie preferences</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="cookie-confirmation" class="govuk-width-container govuk-!-padding-top-6" tabindex="-1" style="display: none;">
+    <p class="cookie-banner__confirmation-message govuk-body">You’ve accepted all cookies. You can <a class="govuk-link" href="/cookies">change your cookie settings</a> at any time.</p>
+    <button class="cookie-banner__hide-button govuk-button govuk-button--secondary" onclick="document.getElementById('cookie-confirmation').style.display='none';">Hide</button>
+  </div>
+
+</div><header role="banner" id="global-header" class="govuk-header  with-proposition dl-header" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="header-proposition">
+      <div class="govuk-header__content">
+        <a href="https://digital-land.github.io/" class="govuk-header__link govuk-header__link--service-name">
+        Digital Land
+        </a>
+        <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>        <nav>
+          <ul id="navigation" class="govuk-header__navigation" aria-label="Top Level Navigation">
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="/about">Team</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="/project/">Projects</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="/weeknote/">Weeknotes</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="/blog-post/">Blog</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="/guidance/">Guidance</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="/dataset/">Datasets</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="/organisation/">Organisations</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="/map/">Map</a>
+            </li>
+          </ul>
+        </nav>
+</div>
+    </div>
+  </div>
+</header>
+
+      <div class="govuk-width-container ">
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+  prototype
+</strong><span class="govuk-phase-banner__text">
+      This is a prototype. Please provide feedback to the Digital Land team.
+    </span>
+  </p>
+</div><div class="govuk-breadcrumbs ">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/">Digital Land</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="../">Scheduled Monument</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item" aria-current="page">scheduled-monument:1017288</li>
+  </ol>
+</div>        <main class="govuk-main-wrapper " id="main-content" role="main">
+
+<span class="govuk-caption-xl">Scheduled monument</span>
+    <h1 class="govuk-heading-xl">Section of Wansdyke and associated monuments from east of The Firs to the eastern side of Tan Hill</h1>
+<div class="govuk-tabs" data-module="dlf-subnav">
+    <h2 class="govuk-tabs__title">
+      Contents
+    </h2>
+    <nav class="dlf-subnav" aria-label="Sub navigation">
+        <ul class="dlf-subnav__list">
+            <li class="dlf-subnav__list-item dlf-subnav__list-item--selected">
+                <a class="dlf-subnav__list-item__link" href="#record" data-module-sub-nav="tab">
+                Record
+                </a>
+            </li>
+            <li class="dlf-subnav__list-item">
+                <a class="dlf-subnav__list-item__link" href="#history" data-module-sub-nav="tab">
+                History
+                </a>
+            </li><li class="dlf-subnav__list-item">
+                <a class="dlf-subnav__list-item__link" href="#referenced-by" data-module-sub-nav="tab">
+                0 References
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+<div id="record">
+<div class="govuk-grid-row">    <div class="govuk-grid-column-two-thirds"><article class="data-record govuk-!-margin-bottom-6">
+    <h4 class="govuk-heading-s data-record__identifier">#/scheduled-monument/1017288</h4>
+    <dl class="govuk-summary-list data-record__properties">            <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">start-date
+            </dt>
+            <dd class="govuk-summary-list__value">                1955-04-18            </dd>
+        </div>        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">geography
+            </dt>
+            <dd class="govuk-summary-list__value">                scheduled-monument:1017288            </dd>
+        </div>        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">name
+            </dt>
+            <dd class="govuk-summary-list__value">                Section of Wansdyke and associated monuments from east of The Firs to the eastern side of Tan Hill            </dd>
+        </div>        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">documentation-url
+            </dt>
+            <dd class="govuk-summary-list__value">                <a class="govuk-link" href="https://historicengland.org.uk/listing/the-list/list-entry/1017288">https://historicengland.org.uk/listing/the-list/list-entry/1017288</a>            </dd>
+        </div>        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">entry-date
+            </dt>
+            <dd class="govuk-summary-list__value">                1999-10-13            </dd>
+        </div>    
+    </dl></article>
+</div>
+            
+</div>
+
+    <h2 class="govuk-heading-m">Geographical area</h2>
+
+    <div class="dl-map__wrapper"><div 
+    class="dl-map govuk-!-margin-top-4"
+    id="dlMap"
+    data-module="boundary-map"
+    style="height: 460px;" data-geojson-urls="geometry.geojson"   
+>
+    <noscript>To view this map, you need to enable JavaScript.</noscript>
+</div>
+    </div>
+
+    <div class="govuk-!-margin-top-2 govuk-!-margin-bottom-6">
+        <a class="dl-page-action-button" href="geometry.geojson">Download geojson</a>
+    </div>
+<h3 class="govuk-heading-m">Associated information</h3>
+
+<ul class="govuk-list govuk-list--bullet">
+    <li><a href="https://digital-land.github.io/specification/schema/geography/">View the geography schema</a></li></ul>
+
+</div>
+
+<div id="history"><h2 class="govuk-heading-m dlf-subnav__heading">History</h2>
+<div class="data-table__wrapper" data-module="data-table">
+    <div class="data-table-left-shadow with-transition"></div>
+    <div class="wide-table">
+        <table class="data-table">
+    <thead>
+        <tr>
+            <th>entry-date</th>
+            <th>resource</th>
+            <th>line</th>
+            <th>name</th>
+            <th>geometry</th>
+            <th>documentation-url</th>
+            <th>start-date</th>
+            <th>geography</th>
+        </tr>
+    </thead>
+    <tbody>        <tr>
+            <td>1999-10-13</td>
+            <td><a href="https://github.com/digital-land/scheduled-monument-collection/tree/main/transformed/scheduled-monument/b892ee0eb89148fc140e3ea288c6fa175c4d6ecb936860e395bbcd33f35c1ba7.csv#L15817">b892ee0eb891...</a></td>
+            <td>15816</td>
+                <td>Section of Wansdyke and associated monuments from east of The Firs to the eastern side of Tan Hill</td> 
+                <td class="data-table__notes-cell data-table__cell--min-width-4">
+                    <details class="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      See WKT
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    MULTIPOLYGON (((-1.875898 51.381470,-1.872505 51.381425,-1.872744 51.382030,-1.872427 51.382080,-1.872106 51.381431,-1.871460 51.381442,-1.869692 51.381297,-1.868751 51.381344,-1.868797 51.381825,-1.868882 51.382266,-1.868890 51.382551,-1.868871 51.382670,-1.868766 51.382807,-1.868548 51.382735,-1.868672 51.382539,-1.868672 51.382367,-1.868523 51.381361,-1.868352 51.381367,-1.868324 51.381254,-1.868181 51.381224,-1.866518 51.381222,-1.862533 51.381316,-1.862453 51.381558,-1.862333 51.381749,-1.862158 51.382157,-1.862064 51.382498,-1.861994 51.383664,-1.862020 51.383947,-1.861661 51.383946,-1.861758 51.382481,-1.862146 51.381330,-1.860691 51.381406,-1.859322 51.381434,-1.859734 51.381137,-1.859998 51.381143,-1.860911 51.381055,-1.862232 51.380985,-1.862186 51.380384,-1.862481 51.380367,-1.862546 51.380980,-1.868439 51.380897,-1.868260 51.380165,-1.867547 51.380212,-1.867405 51.380194,-1.867262 51.380117,-1.867206 51.380027,-1.867158 51.379873,-1.867178 51.379694,-1.865553 51.379591,-1.865620 51.379413,-1.868034 51.379517,-1.868394 51.379821,-1.868918 51.379327,-1.869460 51.379275,-1.870449 51.379317,-1.871076 51.379413,-1.872138 51.380104,-1.872127 51.380574,-1.872164 51.380996,-1.876735 51.381156,-1.878046 51.381389,-1.878331 51.381514,-1.878625 51.381723,-1.879033 51.382074,-1.879457 51.382498,-1.879962 51.382922,-1.880441 51.383211,-1.880693 51.383322,-1.881371 51.383518,-1.881566 51.383659,-1.881898 51.384044,-1.882674 51.384562,-1.882221 51.384822,-1.881062 51.383890,-1.880835 51.383747,-1.879989 51.383461,-1.879373 51.383038,-1.878159 51.381942,-1.877789 51.381722,-1.877209 51.381579,-1.876421 51.381477,-1.875898 51.381470)),((-1.882352 51.384885,-1.882686 51.384695,-1.884223 51.385606,-1.884745 51.386005,-1.884393 51.386249,-1.884137 51.386035,-1.882988 51.385254,-1.882352 51.384885)),((-1.884678 51.386261,-1.884990 51.386049,-1.885148 51.386146,-1.885582 51.386327,-1.886387 51.386506,-1.887185 51.386959,-1.887717 51.387192,-1.888800 51.387365,-1.889541 51.387533,-1.891309 51.387790,-1.892734 51.388124,-1.893237 51.388214,-1.894900 51.388400,-1.894881 51.388679,-1.893769 51.388500,-1.892752 51.388404,-1.890510 51.387950,-1.887479 51.387436,-1.886197 51.386786,-1.884678 51.386261)),((-1.895328 51.388811,-1.895471 51.388537,-1.897362 51.388854,-1.899291 51.388981,-1.899243 51.389231,-1.898739 51.389242,-1.898264 51.389212,-1.896411 51.388990,-1.895328 51.388811)),((-1.899376 51.389219,-1.899424 51.388981,-1.901658 51.389078,-1.901610 51.389322,-1.899376 51.389219)),((-1.902703 51.389364,-1.902732 51.389114,-1.904557 51.389193,-1.906458 51.389225,-1.907456 51.389285,-1.907427 51.389541,-1.902703 51.389364)),((-1.913773 51.390538,-1.913426 51.390491,-1.912712 51.390482,-1.911950 51.390536,-1.910352 51.390356,-1.909034 51.390117,-1.908748 51.389998,-1.908721 51.389934,-1.908789 51.389781,-1.909062 51.389564,-1.907967 51.389602,-1.907825 51.389316,-1.908750 51.389258,-1.909770 51.389271,-1.910116 51.389310,-1.911211 51.389668,-1.911863 51.389830,-1.913080 51.390261,-1.913148 51.390222,-1.913651 51.390206,-1.915303 51.390458,-1.917884 51.390550,-1.919282 51.390778,-1.919212 51.390988,-1.919158 51.391035,-1.918906 51.391099,-1.918791 51.391065,-1.918696 51.390945,-1.915622 51.390748,-1.913773 51.390538)),((-1.919684 51.391263,-1.919803 51.390899,-1.920900 51.391016,-1.922334 51.391069,-1.922357 51.391054,-1.922332 51.391010,-1.922351 51.390909,-1.922451 51.390842,-1.923103 51.390858,-1.923197 51.390878,-1.923303 51.390991,-1.923303 51.391054,-1.923221 51.391152,-1.923473 51.391176,-1.924316 51.391345,-1.927294 51.392266,-1.928441 51.392694,-1.933012 51.394043,-1.932864 51.394299,-1.932730 51.394292,-1.929542 51.393393,-1.927833 51.392821,-1.927428 51.392641,-1.923725 51.391567,-1.919684 51.391263)),((-1.933442 51.394128,-1.935940 51.394831,-1.935965 51.394859,-1.935792 51.395089,-1.935735 51.395103,-1.933333 51.394417,-1.933302 51.394374,-1.933442 51.394128)),((-1.937874 51.395841,-1.937694 51.395758,-1.937642 51.395787,-1.937220 51.395604,-1.937427 51.395427,-1.939832 51.396512,-1.939511 51.396753,-1.937758 51.395969,-1.937874 51.395841)),((-1.939769 51.396844,-1.940055 51.396610,-1.943860 51.398325,-1.943546 51.398572,-1.939769 51.396844)),((-1.962635 51.404255,-1.962538 51.404232,-1.962504 51.404192,-1.962558 51.404029,-1.962610 51.404003,-1.963519 51.404103,-1.964661 51.404182,-1.966767 51.404248,-1.967362 51.404136,-1.967771 51.403981,-1.968046 51.403839,-1.966963 51.403777,-1.966339 51.403701,-1.965558 51.403553,-1.963673 51.403101,-1.963504 51.403226,-1.963244 51.403240,-1.963117 51.403193,-1.963033 51.403117,-1.963010 51.403026,-1.963058 51.402912,-1.961968 51.402646,-1.961352 51.402542,-1.960148 51.402384,-1.958250 51.402294,-1.957155 51.402140,-1.955585 51.401775,-1.954026 51.401270,-1.953550 51.401173,-1.953900 51.401449,-1.953897 51.401502,-1.953852 51.401548,-1.953691 51.401572,-1.953505 51.401474,-1.953304 51.401311,-1.953125 51.401109,-1.951597 51.400950,-1.950860 51.400767,-1.950610 51.400637,-1.949983 51.400188,-1.949600 51.399992,-1.948310 51.400205,-1.947937 51.400320,-1.947682 51.400353,-1.945102 51.400142,-1.944852 51.400062,-1.944768 51.399986,-1.944435 51.399399,-1.944204 51.399126,-1.943883 51.399081,-1.943810 51.399020,-1.943796 51.398932,-1.943894 51.398837,-1.944342 51.398654,-1.944425 51.398658,-1.944893 51.399134,-1.945287 51.399753,-1.945340 51.399783,-1.946663 51.399893,-1.946739 51.399807,-1.946872 51.399781,-1.947004 51.399830,-1.947028 51.399925,-1.947675 51.399969,-1.948903 51.399744,-1.948919 51.399631,-1.949068 51.399559,-1.949241 51.399575,-1.949346 51.399663,-1.949594 51.399630,-1.949766 51.399647,-1.950150 51.399773,-1.950617 51.400060,-1.951107 51.400419,-1.951490 51.400563,-1.953033 51.400701,-1.953778 51.400820,-1.954195 51.400920,-1.956047 51.401516,-1.957483 51.401826,-1.958243 51.401910,-1.960298 51.402063,-1.961549 51.402246,-1.962806 51.402487,-1.963004 51.402364,-1.963183 51.402351,-1.963267 51.402384,-1.963322 51.402448,-1.963282 51.402613,-1.966428 51.403339,-1.966856 51.403384,-1.967590 51.403397,-1.968689 51.403538,-1.968900 51.403527,-1.969209 51.403456,-1.969614 51.403445,-1.971331 51.403561,-1.972610 51.403718,-1.973214 51.403815,-1.973257 51.403847,-1.973199 51.404049,-1.973148 51.404078,-1.970506 51.403780,-1.969947 51.403747,-1.969510 51.403765,-1.968821 51.403894,-1.967297 51.404397,-1.966534 51.404503,-1.963662 51.404362,-1.962635 51.404255)))
+  </div>
+</details>
+                </td>
+                <td>https://historicengland.org.uk/listing/the-list/list-entry/1017288</td> 
+                <td>1955-04-18</td> 
+                <td>scheduled-monument:1017288</td> 
+        </tr>    </tbody>
+</table>
+
+    </div>
+    <div class="data-table-right-shadow visible with-transition"></div>
+</div>
+</div><div id="referenced-by">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h2 class="govuk-heading-m dlf-subnav__heading">Referenced by</h2>
+            <p class="govuk-body">This record is referenced by 0 other planning related data records.</p>
+</div>
+    </div>
+</div>
+        </main>
+      </div>
+
+    <div class="dlf-feedback__wrapper">
+    <div class="dlf-feedback">
+    <div class="dlf-feedback__prompt">
+        <div class="dlf-feedback__prompt-content">
+            <span class="dlf-feedback__prompt-content__text">Spotted an issue? Let us know so we can improve the data.</span>
+        </div>
+        <div class="dlf-feedback__prompt-action">
+            <a href="mailto:digitalLand@communities.gov.uk?subject=Feedback on (geography) Section of Wansdyke and associated monuments from east of The Firs to the eastern side of Tan Hill -- scheduled-monument" class="govuk-button dlf-feedback__prompt__link">There is something wrong with the data</a>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<footer class="govuk-footer " role="contentinfo"
+>
+  <div class="govuk-width-container ">
+    <div class="govuk-footer__meta">
+      <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+          <h2 class="govuk-visually-hidden">Support links</h2>              <ul class="govuk-footer__inline-list">
+                  <li class="govuk-footer__inline-list-item">
+                    <a class="govuk-footer__link" href="/cookies">
+                      Cookies
+                    </a>
+                  </li>
+                  <li class="govuk-footer__inline-list-item">
+                    <a class="govuk-footer__link" href="/accessibility-statement">
+                      Accessibility statement
+                    </a>
+                  </li>
+                  <li class="govuk-footer__inline-list-item">
+                    <a class="govuk-footer__link" href="/design-system">
+                      Design system
+                    </a>
+                  </li>
+              </ul>
+            <div class="govuk-footer__meta-custom">
+              The <a class="govuk-footer__link" href="https://github.com/digital-land/digital-land/">software</a> and <a class="govuk-footer__link" href="https://github.com/digital-land/digital-land/">data</a> used to build these pages is <a class="govuk-footer__link" href="https://github.com/digital-land/digital-land/blob/master/LICENSE">open source</a>.
+            </div>
+        <svg
+          role="presentation"
+          focusable="false"
+          class="govuk-footer__licence-logo"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 483.2 195.7"
+          height="17"
+          width="41"
+        >
+          <path
+            fill="currentColor"
+            d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+          />
+        </svg>
+        <span class="govuk-footer__licence-description">
+          All content is available under the
+          <a
+            class="govuk-footer__link"
+            href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+            rel="license"
+          >Open Government Licence v3.0</a>, except where otherwise stated
+        </span>
+      </div>
+      <div class="govuk-footer__meta-item">
+        <a
+          class="govuk-footer__link govuk-footer__copyright-logo"
+          href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+        >© Crown copyright</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://digital-land.github.io/javascripts/dl-cookies.js"></script>
+	<script async src='https://www.google-analytics.com/analytics.js'></script>
+	<!-- end google analytics -->
+
+	<script src="https://digital-land.github.io/javascripts/govuk/govuk-frontend.min.js"></script>
+	<script>
+		// initiate all GOVUK components
+		window.GOVUKFrontend.initAll();
+	</script>
+
+	<script src="https://digital-land.github.io/javascripts/dl-frontend.js"></script>
+	<script>
+		// adds any necessary polyfills
+		window.DLFrontend.polyfill();
+	</script>
+
+<script>
+    const datasetName = "scheduled-monument"
+    const $mapElement = document.querySelector('[data-module="boundary-map"]')
+    const $nationalMapLink = document.querySelector('.dl-link-national-map')
+    const mapComponent = new DLMaps.Map($mapElement).init({
+        initGeoJsonLoadCallback: function (urls, featureGroup) {
+            console.log("initial load completed")
+            // do we need to check there isn't more than one shape?
+            const center = featureGroup.getBounds().getCenter()
+            const zoom = mapComponent.map.getZoom()
+            let url = `http://digital-land.github.io/map?layer=${datasetName}#${center.lat},${center.lng},${zoom}z`
+            console.log(url)
+            if ($nationalMapLink) {
+                // only show this for the datasets we've added to the national map
+                $nationalMapLink.href = url
+                $nationalMapLink.classList.remove("js-hidden")
+            }
+        }
+    })
+</script>
+<script>
+    // Initialise back to top
+    var $data_tables = document.querySelectorAll('[data-module*="data-table"]')
+    $data_tables.forEach(data_table => {
+        new window.DLFrontend.ScrollableTables(data_table).init()
+    })
+</script>
+
+<script>
+    const $subNavTabs = document.querySelector('[data-module="dlf-subnav"]')
+    const subNavTabsComponent = new DLFrontend.SubNavTabs($subNavTabs).init({})
+</script>  </body>
+</html>

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en" class="govuk-template ">
+  <head>
+    <meta charset="utf-8">
+    <title>Later prehistoric cliff castle, two prehistoric round barrows, medieval field system, and associated remains on Dodman Point | Scheduled-monument | Digital Land</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#0b0c0c">     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="shortcut icon" sizes="48x48" href="/images/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" sizes="32x32" href="/images/favicon-32x32.png" type="image/png">
+<link rel="shortcut icon" sizes="16x16" href="/images/favicon-16x16.png" type="image/png">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+	<meta name="digital-land:template" content="page-per-thing/record.html"><!-- should make this optional, no need to load if not showing a map -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+crossorigin="" />
+
+<!-- Make sure you put this AFTER Leaflet's CSS -->
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+	integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+	crossorigin=""></script>
+
+<!-- assets needed for fullscreen maps -->
+<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
+<link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
+
+<!-- script needed for recentring map -->
+<script src="https://digital-land.github.io/javascripts/Leaflet.recentre.js"></script>
+
+<script src="https://digital-land.github.io/javascripts/dl-maps.js"></script>	<link href="https://digital-land.github.io/stylesheets/dl-frontend.css" rel="stylesheet" />    <meta property="og:image" content="/images/govuk-opengraph-image.png">
+  </head>
+  <body class="govuk-template__body ">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+      <a href="#main-content" class="govuk-skip-link">Skip to main content</a>
+
+<!-- Cookie banner partial version 1.0.1 -->
+<div id="global-cookie-message" class="govuk-clearfix global-cookie-message" data-module="cookie-banner" role="region" aria-label="cookie banner" data-nosnippet="">
+
+  <div id="cookie-banner" class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <div class="cookie-banner__message govuk-!-margin-top-6">
+          <h2 class="govuk-heading-m">Tell us whether you accept cookies</h2>
+          <p class="govuk-body">We use <a class="govuk-link" href="/cookies">cookies to collect information</a> about how you use the Digital Land website to make the website work as well as possible.</p>
+        </div>
+        <div class="cooke-banner__buttons govuk-grid-row">
+          <div class="govuk-grid-column-one-half">
+            <button class="govuk-button" onclick="acceptCookies();showCookieConfirmation();">Accept all cookies</button>
+          </div>
+          <div class="govuk-grid-column-one-half">
+            <a class="govuk-button" href="/cookies">Set cookie preferences</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="cookie-confirmation" class="govuk-width-container govuk-!-padding-top-6" tabindex="-1" style="display: none;">
+    <p class="cookie-banner__confirmation-message govuk-body">You’ve accepted all cookies. You can <a class="govuk-link" href="/cookies">change your cookie settings</a> at any time.</p>
+    <button class="cookie-banner__hide-button govuk-button govuk-button--secondary" onclick="document.getElementById('cookie-confirmation').style.display='none';">Hide</button>
+  </div>
+
+</div><header role="banner" id="global-header" class="govuk-header  with-proposition dl-header" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="header-proposition">
+      <div class="govuk-header__content">
+        <a href="https://digital-land.github.io/" class="govuk-header__link govuk-header__link--service-name">
+        Digital Land
+        </a>
+        <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>        <nav>
+          <ul id="navigation" class="govuk-header__navigation" aria-label="Top Level Navigation">
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="/about">Team</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="/project/">Projects</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="/weeknote/">Weeknotes</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="/blog-post/">Blog</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="/guidance/">Guidance</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="/dataset/">Datasets</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="/organisation/">Organisations</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="/map/">Map</a>
+            </li>
+          </ul>
+        </nav>
+</div>
+    </div>
+  </div>
+</header>
+
+      <div class="govuk-width-container ">
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+  prototype
+</strong><span class="govuk-phase-banner__text">
+      This is a prototype. Please provide feedback to the Digital Land team.
+    </span>
+  </p>
+</div><div class="govuk-breadcrumbs ">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/">Digital Land</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="../">Scheduled Monument</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item" aria-current="page">scheduled-monument:1020865</li>
+  </ol>
+</div>        <main class="govuk-main-wrapper " id="main-content" role="main">
+
+<span class="govuk-caption-xl">Scheduled monument</span>
+    <h1 class="govuk-heading-xl">Later prehistoric cliff castle, two prehistoric round barrows, medieval field system, and associated remains on Dodman Point</h1>
+<div class="govuk-tabs" data-module="dlf-subnav">
+    <h2 class="govuk-tabs__title">
+      Contents
+    </h2>
+    <nav class="dlf-subnav" aria-label="Sub navigation">
+        <ul class="dlf-subnav__list">
+            <li class="dlf-subnav__list-item dlf-subnav__list-item--selected">
+                <a class="dlf-subnav__list-item__link" href="#record" data-module-sub-nav="tab">
+                Record
+                </a>
+            </li>
+            <li class="dlf-subnav__list-item">
+                <a class="dlf-subnav__list-item__link" href="#history" data-module-sub-nav="tab">
+                History
+                </a>
+            </li><li class="dlf-subnav__list-item">
+                <a class="dlf-subnav__list-item__link" href="#referenced-by" data-module-sub-nav="tab">
+                0 References
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+<div id="record">
+<div class="govuk-grid-row">    <div class="govuk-grid-column-two-thirds"><article class="data-record govuk-!-margin-bottom-6">
+    <h4 class="govuk-heading-s data-record__identifier">#/scheduled-monument/1020865</h4>
+    <dl class="govuk-summary-list data-record__properties">            <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">geography
+            </dt>
+            <dd class="govuk-summary-list__value">                scheduled-monument:1020865            </dd>
+        </div>        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">start-date
+            </dt>
+            <dd class="govuk-summary-list__value">                1960-12-01            </dd>
+        </div>        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">name
+            </dt>
+            <dd class="govuk-summary-list__value">                Later prehistoric cliff castle, two prehistoric round barrows, medieval field system, and associated remains on Dodman Point            </dd>
+        </div>        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">documentation-url
+            </dt>
+            <dd class="govuk-summary-list__value">                <a class="govuk-link" href="https://historicengland.org.uk/listing/the-list/list-entry/1020865">https://historicengland.org.uk/listing/the-list/list-entry/1020865</a>            </dd>
+        </div>        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">entry-date
+            </dt>
+            <dd class="govuk-summary-list__value">                2003-01-28            </dd>
+        </div>    
+    </dl></article>
+</div>
+            
+</div>
+
+    <h2 class="govuk-heading-m">Geographical area</h2>
+
+    <div class="dl-map__wrapper"><div 
+    class="dl-map govuk-!-margin-top-4"
+    id="dlMap"
+    data-module="boundary-map"
+    style="height: 460px;" data-geojson-urls="geometry.geojson"   
+>
+    <noscript>To view this map, you need to enable JavaScript.</noscript>
+</div>
+    </div>
+
+    <div class="govuk-!-margin-top-2 govuk-!-margin-bottom-6">
+        <a class="dl-page-action-button" href="geometry.geojson">Download geojson</a>
+    </div>
+<h3 class="govuk-heading-m">Associated information</h3>
+
+<ul class="govuk-list govuk-list--bullet">
+    <li><a href="https://digital-land.github.io/specification/schema/geography/">View the geography schema</a></li></ul>
+
+</div>
+
+<div id="history"><h2 class="govuk-heading-m dlf-subnav__heading">History</h2>
+<div class="data-table__wrapper" data-module="data-table">
+    <div class="data-table-left-shadow with-transition"></div>
+    <div class="wide-table">
+        <table class="data-table">
+    <thead>
+        <tr>
+            <th>entry-date</th>
+            <th>resource</th>
+            <th>line</th>
+            <th>name</th>
+            <th>geometry</th>
+            <th>documentation-url</th>
+            <th>start-date</th>
+            <th>geography</th>
+        </tr>
+    </thead>
+    <tbody>        <tr>
+            <td>2003-01-28</td>
+            <td><a href="https://github.com/digital-land/scheduled-monument-collection/tree/main/transformed/scheduled-monument/b892ee0eb89148fc140e3ea288c6fa175c4d6ecb936860e395bbcd33f35c1ba7.csv#L12732">b892ee0eb891...</a></td>
+            <td>12731</td>
+                <td>Later prehistoric cliff castle, two prehistoric round barrows, medieval field system, and associated remains on Dodman Point</td> 
+                <td class="data-table__notes-cell data-table__cell--min-width-4">
+                    <details class="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      See WKT
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    MULTIPOLYGON (((-4.798540 50.225931,-4.798491 50.225850,-4.798414 50.225826,-4.798235 50.225893,-4.797873 50.225936,-4.797836 50.225911,-4.797812 50.225815,-4.797742 50.225754,-4.797787 50.225375,-4.797833 50.225333,-4.797918 50.225344,-4.797972 50.225114,-4.798088 50.224980,-4.798082 50.224951,-4.797922 50.224955,-4.798043 50.224900,-4.798012 50.224822,-4.797782 50.224793,-4.797836 50.224662,-4.797823 50.224626,-4.797721 50.224587,-4.797819 50.224564,-4.797767 50.224505,-4.797701 50.224524,-4.797619 50.224483,-4.797631 50.224385,-4.797540 50.224279,-4.797505 50.224146,-4.797806 50.224033,-4.798013 50.224002,-4.798015 50.223873,-4.797973 50.223837,-4.798010 50.223791,-4.797864 50.223659,-4.797800 50.223638,-4.797829 50.223598,-4.797810 50.223567,-4.797640 50.223560,-4.797487 50.223446,-4.797557 50.223362,-4.797691 50.223293,-4.797629 50.223069,-4.797579 50.223047,-4.797234 50.223087,-4.797193 50.223068,-4.797220 50.223004,-4.797616 50.222912,-4.797680 50.222865,-4.797698 50.222790,-4.797689 50.222727,-4.797467 50.222730,-4.797456 50.222693,-4.797514 50.222626,-4.797688 50.222619,-4.797695 50.222596,-4.797598 50.222525,-4.797560 50.222453,-4.797507 50.222429,-4.797453 50.222482,-4.797429 50.222465,-4.797406 50.222443,-4.797434 50.222391,-4.797312 50.222291,-4.797314 50.222245,-4.797404 50.222180,-4.797419 50.222134,-4.797385 50.222092,-4.797409 50.222043,-4.797292 50.222020,-4.797231 50.222069,-4.797188 50.222063,-4.797158 50.222018,-4.797105 50.222013,-4.797084 50.221897,-4.796985 50.221876,-4.797008 50.221818,-4.797080 50.221788,-4.797182 50.221669,-4.797202 50.221545,-4.797299 50.221456,-4.797280 50.221355,-4.797358 50.221096,-4.797356 50.220988,-4.797379 50.220924,-4.797529 50.220818,-4.797470 50.220805,-4.797451 50.220711,-4.797751 50.220587,-4.797744 50.220533,-4.797594 50.220488,-4.797559 50.220417,-4.797610 50.220379,-4.797714 50.220400,-4.797829 50.220319,-4.797793 50.220296,-4.797825 50.220257,-4.797782 50.220195,-4.797895 50.220075,-4.798031 50.220114,-4.798038 50.219943,-4.798123 50.219944,-4.798341 50.219787,-4.798468 50.219747,-4.798501 50.219709,-4.798500 50.219623,-4.798429 50.219563,-4.798439 50.219491,-4.798542 50.219420,-4.798651 50.219451,-4.799129 50.219343,-4.799225 50.219223,-4.799751 50.219388,-4.800115 50.219367,-4.800306 50.219283,-4.800822 50.219210,-4.801090 50.219078,-4.801210 50.219070,-4.801441 50.218990,-4.801538 50.218887,-4.802101 50.218774,-4.802350 50.218782,-4.802500 50.218713,-4.802628 50.218810,-4.802845 50.218859,-4.802965 50.218779,-4.803272 50.218700,-4.803878 50.218788,-4.803930 50.218847,-4.804115 50.218891,-4.803982 50.218751,-4.803987 50.218677,-4.804086 50.218623,-4.804134 50.218676,-4.804187 50.218681,-4.804249 50.218585,-4.804503 50.218522,-4.804594 50.218625,-4.804609 50.218733,-4.804695 50.218677,-4.804833 50.218691,-4.804919 50.218714,-4.804945 50.218851,-4.805257 50.218861,-4.805328 50.218927,-4.805315 50.219010,-4.805184 50.219131,-4.805019 50.219192,-4.804967 50.219293,-4.804893 50.219329,-4.804777 50.219325,-4.804707 50.219422,-4.804757 50.219774,-4.804919 50.220222,-4.805013 50.220312,-4.805203 50.220384,-4.805378 50.220303,-4.805440 50.220301,-4.805475 50.220363,-4.805527 50.220305,-4.805583 50.220309,-4.805521 50.220402,-4.805524 50.220451,-4.805420 50.220493,-4.805374 50.220620,-4.805305 50.220656,-4.805307 50.220690,-4.805337 50.220752,-4.805316 50.220767,-4.805389 50.220794,-4.805509 50.220722,-4.805642 50.220719,-4.805666 50.220741,-4.805542 50.220899,-4.805554 50.220950,-4.805622 50.220974,-4.805852 50.220957,-4.805963 50.221020,-4.806161 50.221058,-4.806221 50.221028,-4.806409 50.221032,-4.806507 50.220969,-4.806496 50.220847,-4.806555 50.220791,-4.806599 50.220793,-4.806623 50.220890,-4.806732 50.220933,-4.806838 50.220913,-4.806786 50.220789,-4.806906 50.220777,-4.806947 50.220802,-4.806989 50.220758,-4.807066 50.220806,-4.807153 50.220743,-4.807224 50.220735,-4.807192 50.220802,-4.807202 50.220904,-4.807377 50.220926,-4.807471 50.221006,-4.807518 50.220979,-4.807640 50.221082,-4.807596 50.221172,-4.807499 50.221180,-4.807465 50.221352,-4.807567 50.221347,-4.807564 50.221378,-4.807461 50.221449,-4.807472 50.221477,-4.807820 50.221415,-4.807889 50.221450,-4.807883 50.221573,-4.807738 50.221640,-4.807742 50.221676,-4.807821 50.221733,-4.807883 50.221722,-4.807893 50.221744,-4.807901 50.221813,-4.807810 50.221929,-4.807827 50.221997,-4.808058 50.221837,-4.808116 50.221747,-4.808313 50.221743,-4.808233 50.221802,-4.808331 50.221859,-4.808332 50.221914,-4.808260 50.222012,-4.808186 50.222057,-4.808133 50.222190,-4.808188 50.222228,-4.808207 50.222328,-4.808360 50.222430,-4.808445 50.222651,-4.808454 50.222730,-4.808353 50.222838,-4.808398 50.222920,-4.808570 50.222813,-4.808582 50.222844,-4.808447 50.223065,-4.808467 50.223116,-4.808724 50.223158,-4.807853 50.223487,-4.807528 50.223641,-4.808528 50.224222,-4.809102 50.224518,-4.808407 50.224814,-4.807428 50.224292,-4.806819 50.223858,-4.806064 50.224014,-4.805274 50.224225,-4.804937 50.224356,-4.803953 50.224996,-4.803546 50.225354,-4.802625 50.226050,-4.802306 50.226207,-4.802156 50.226239,-4.801635 50.226219,-4.800389 50.225872,-4.799995 50.225836,-4.799854 50.225863,-4.799288 50.226080,-4.799033 50.226257,-4.798960 50.226258,-4.798853 50.226332,-4.798791 50.226185,-4.798790 50.226094,-4.798540 50.225931)))
+  </div>
+</details>
+                </td>
+                <td>https://historicengland.org.uk/listing/the-list/list-entry/1020865</td> 
+                <td>1960-12-01</td> 
+                <td>scheduled-monument:1020865</td> 
+        </tr>    </tbody>
+</table>
+
+    </div>
+    <div class="data-table-right-shadow visible with-transition"></div>
+</div>
+</div><div id="referenced-by">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h2 class="govuk-heading-m dlf-subnav__heading">Referenced by</h2>
+            <p class="govuk-body">This record is referenced by 0 other planning related data records.</p>
+</div>
+    </div>
+</div>
+        </main>
+      </div>
+
+    <div class="dlf-feedback__wrapper">
+    <div class="dlf-feedback">
+    <div class="dlf-feedback__prompt">
+        <div class="dlf-feedback__prompt-content">
+            <span class="dlf-feedback__prompt-content__text">Spotted an issue? Let us know so we can improve the data.</span>
+        </div>
+        <div class="dlf-feedback__prompt-action">
+            <a href="mailto:digitalLand@communities.gov.uk?subject=Feedback on (geography) Later prehistoric cliff castle, two prehistoric round barrows, medieval field system, and associated remains on Dodman Point -- scheduled-monument" class="govuk-button dlf-feedback__prompt__link">There is something wrong with the data</a>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<footer class="govuk-footer " role="contentinfo"
+>
+  <div class="govuk-width-container ">
+    <div class="govuk-footer__meta">
+      <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+          <h2 class="govuk-visually-hidden">Support links</h2>              <ul class="govuk-footer__inline-list">
+                  <li class="govuk-footer__inline-list-item">
+                    <a class="govuk-footer__link" href="/cookies">
+                      Cookies
+                    </a>
+                  </li>
+                  <li class="govuk-footer__inline-list-item">
+                    <a class="govuk-footer__link" href="/accessibility-statement">
+                      Accessibility statement
+                    </a>
+                  </li>
+                  <li class="govuk-footer__inline-list-item">
+                    <a class="govuk-footer__link" href="/design-system">
+                      Design system
+                    </a>
+                  </li>
+              </ul>
+            <div class="govuk-footer__meta-custom">
+              The <a class="govuk-footer__link" href="https://github.com/digital-land/digital-land/">software</a> and <a class="govuk-footer__link" href="https://github.com/digital-land/digital-land/">data</a> used to build these pages is <a class="govuk-footer__link" href="https://github.com/digital-land/digital-land/blob/master/LICENSE">open source</a>.
+            </div>
+        <svg
+          role="presentation"
+          focusable="false"
+          class="govuk-footer__licence-logo"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 483.2 195.7"
+          height="17"
+          width="41"
+        >
+          <path
+            fill="currentColor"
+            d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+          />
+        </svg>
+        <span class="govuk-footer__licence-description">
+          All content is available under the
+          <a
+            class="govuk-footer__link"
+            href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+            rel="license"
+          >Open Government Licence v3.0</a>, except where otherwise stated
+        </span>
+      </div>
+      <div class="govuk-footer__meta-item">
+        <a
+          class="govuk-footer__link govuk-footer__copyright-logo"
+          href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+        >© Crown copyright</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://digital-land.github.io/javascripts/dl-cookies.js"></script>
+	<script async src='https://www.google-analytics.com/analytics.js'></script>
+	<!-- end google analytics -->
+
+	<script src="https://digital-land.github.io/javascripts/govuk/govuk-frontend.min.js"></script>
+	<script>
+		// initiate all GOVUK components
+		window.GOVUKFrontend.initAll();
+	</script>
+
+	<script src="https://digital-land.github.io/javascripts/dl-frontend.js"></script>
+	<script>
+		// adds any necessary polyfills
+		window.DLFrontend.polyfill();
+	</script>
+
+<script>
+    const datasetName = "scheduled-monument"
+    const $mapElement = document.querySelector('[data-module="boundary-map"]')
+    const $nationalMapLink = document.querySelector('.dl-link-national-map')
+    const mapComponent = new DLMaps.Map($mapElement).init({
+        initGeoJsonLoadCallback: function (urls, featureGroup) {
+            console.log("initial load completed")
+            // do we need to check there isn't more than one shape?
+            const center = featureGroup.getBounds().getCenter()
+            const zoom = mapComponent.map.getZoom()
+            let url = `http://digital-land.github.io/map?layer=${datasetName}#${center.lat},${center.lng},${zoom}z`
+            console.log(url)
+            if ($nationalMapLink) {
+                // only show this for the datasets we've added to the national map
+                $nationalMapLink.href = url
+                $nationalMapLink.classList.remove("js-hidden")
+            }
+        }
+    })
+</script>
+<script>
+    // Initialise back to top
+    var $data_tables = document.querySelectorAll('[data-module*="data-table"]')
+    $data_tables.forEach(data_table => {
+        new window.DLFrontend.ScrollableTables(data_table).init()
+    })
+</script>
+
+<script>
+    const $subNavTabs = document.querySelector('[data-module="dlf-subnav"]')
+    const subNavTabsComponent = new DLFrontend.SubNavTabs($subNavTabs).init({})
+</script>  </body>
+</html>

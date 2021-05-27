@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en" class="govuk-template ">
+  <head>
+    <meta charset="utf-8">
+    <title>Byland Abbey Cistercian monastery: monastic precinct, water-management earthworks, enclosures, ancillary buildings and quarries | Scheduled-monument | Digital Land</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#0b0c0c">     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="shortcut icon" sizes="48x48" href="/images/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" sizes="32x32" href="/images/favicon-32x32.png" type="image/png">
+<link rel="shortcut icon" sizes="16x16" href="/images/favicon-16x16.png" type="image/png">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+	<meta name="digital-land:template" content="page-per-thing/record.html"><!-- should make this optional, no need to load if not showing a map -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+crossorigin="" />
+
+<!-- Make sure you put this AFTER Leaflet's CSS -->
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+	integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+	crossorigin=""></script>
+
+<!-- assets needed for fullscreen maps -->
+<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
+<link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
+
+<!-- script needed for recentring map -->
+<script src="https://digital-land.github.io/javascripts/Leaflet.recentre.js"></script>
+
+<script src="https://digital-land.github.io/javascripts/dl-maps.js"></script>	<link href="https://digital-land.github.io/stylesheets/dl-frontend.css" rel="stylesheet" />    <meta property="og:image" content="/images/govuk-opengraph-image.png">
+  </head>
+  <body class="govuk-template__body ">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+      <a href="#main-content" class="govuk-skip-link">Skip to main content</a>
+
+<!-- Cookie banner partial version 1.0.1 -->
+<div id="global-cookie-message" class="govuk-clearfix global-cookie-message" data-module="cookie-banner" role="region" aria-label="cookie banner" data-nosnippet="">
+
+  <div id="cookie-banner" class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <div class="cookie-banner__message govuk-!-margin-top-6">
+          <h2 class="govuk-heading-m">Tell us whether you accept cookies</h2>
+          <p class="govuk-body">We use <a class="govuk-link" href="/cookies">cookies to collect information</a> about how you use the Digital Land website to make the website work as well as possible.</p>
+        </div>
+        <div class="cooke-banner__buttons govuk-grid-row">
+          <div class="govuk-grid-column-one-half">
+            <button class="govuk-button" onclick="acceptCookies();showCookieConfirmation();">Accept all cookies</button>
+          </div>
+          <div class="govuk-grid-column-one-half">
+            <a class="govuk-button" href="/cookies">Set cookie preferences</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="cookie-confirmation" class="govuk-width-container govuk-!-padding-top-6" tabindex="-1" style="display: none;">
+    <p class="cookie-banner__confirmation-message govuk-body">You’ve accepted all cookies. You can <a class="govuk-link" href="/cookies">change your cookie settings</a> at any time.</p>
+    <button class="cookie-banner__hide-button govuk-button govuk-button--secondary" onclick="document.getElementById('cookie-confirmation').style.display='none';">Hide</button>
+  </div>
+
+</div><header role="banner" id="global-header" class="govuk-header  with-proposition dl-header" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="header-proposition">
+      <div class="govuk-header__content">
+        <a href="https://digital-land.github.io/" class="govuk-header__link govuk-header__link--service-name">
+        Digital Land
+        </a>
+        <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>        <nav>
+          <ul id="navigation" class="govuk-header__navigation" aria-label="Top Level Navigation">
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="/about">Team</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="/project/">Projects</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="/weeknote/">Weeknotes</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="/blog-post/">Blog</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="/guidance/">Guidance</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="/dataset/">Datasets</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="/organisation/">Organisations</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="/map/">Map</a>
+            </li>
+          </ul>
+        </nav>
+</div>
+    </div>
+  </div>
+</header>
+
+      <div class="govuk-width-container ">
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+  prototype
+</strong><span class="govuk-phase-banner__text">
+      This is a prototype. Please provide feedback to the Digital Land team.
+    </span>
+  </p>
+</div><div class="govuk-breadcrumbs ">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/">Digital Land</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="../">Scheduled Monument</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item" aria-current="page">scheduled-monument:1013403</li>
+  </ol>
+</div>        <main class="govuk-main-wrapper " id="main-content" role="main">
+
+<span class="govuk-caption-xl">Scheduled monument</span>
+    <h1 class="govuk-heading-xl">Byland Abbey Cistercian monastery: monastic precinct, water-management earthworks, enclosures, ancillary buildings and quarries</h1>
+<div class="govuk-tabs" data-module="dlf-subnav">
+    <h2 class="govuk-tabs__title">
+      Contents
+    </h2>
+    <nav class="dlf-subnav" aria-label="Sub navigation">
+        <ul class="dlf-subnav__list">
+            <li class="dlf-subnav__list-item dlf-subnav__list-item--selected">
+                <a class="dlf-subnav__list-item__link" href="#record" data-module-sub-nav="tab">
+                Record
+                </a>
+            </li>
+            <li class="dlf-subnav__list-item">
+                <a class="dlf-subnav__list-item__link" href="#history" data-module-sub-nav="tab">
+                History
+                </a>
+            </li><li class="dlf-subnav__list-item">
+                <a class="dlf-subnav__list-item__link" href="#referenced-by" data-module-sub-nav="tab">
+                0 References
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+<div id="record">
+<div class="govuk-grid-row">    <div class="govuk-grid-column-two-thirds"><article class="data-record govuk-!-margin-bottom-6">
+    <h4 class="govuk-heading-s data-record__identifier">#/scheduled-monument/1013403</h4>
+    <dl class="govuk-summary-list data-record__properties">            <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">name
+            </dt>
+            <dd class="govuk-summary-list__value">                Byland Abbey Cistercian monastery: monastic precinct, water-management earthworks, enclosures, ancillary buildings and quarries            </dd>
+        </div>        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">documentation-url
+            </dt>
+            <dd class="govuk-summary-list__value">                <a class="govuk-link" href="https://historicengland.org.uk/listing/the-list/list-entry/1013403">https://historicengland.org.uk/listing/the-list/list-entry/1013403</a>            </dd>
+        </div>        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">geography
+            </dt>
+            <dd class="govuk-summary-list__value">                scheduled-monument:1013403            </dd>
+        </div>        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">start-date
+            </dt>
+            <dd class="govuk-summary-list__value">                1992-07-20            </dd>
+        </div>        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">entry-date
+            </dt>
+            <dd class="govuk-summary-list__value">                2021-05-27            </dd>
+        </div>    
+    </dl></article>
+</div>
+            
+</div>
+
+    <h2 class="govuk-heading-m">Geographical area</h2>
+
+    <div class="dl-map__wrapper"><div 
+    class="dl-map govuk-!-margin-top-4"
+    id="dlMap"
+    data-module="boundary-map"
+    style="height: 460px;" data-geojson-urls="geometry.geojson"   
+>
+    <noscript>To view this map, you need to enable JavaScript.</noscript>
+</div>
+    </div>
+
+    <div class="govuk-!-margin-top-2 govuk-!-margin-bottom-6">
+        <a class="dl-page-action-button" href="geometry.geojson">Download geojson</a>
+    </div>
+<h3 class="govuk-heading-m">Associated information</h3>
+
+<ul class="govuk-list govuk-list--bullet">
+    <li><a href="https://digital-land.github.io/specification/schema/geography/">View the geography schema</a></li></ul>
+
+</div>
+
+<div id="history"><h2 class="govuk-heading-m dlf-subnav__heading">History</h2>
+<div class="data-table__wrapper" data-module="data-table">
+    <div class="data-table-left-shadow with-transition"></div>
+    <div class="wide-table">
+        <table class="data-table">
+    <thead>
+        <tr>
+            <th>entry-date</th>
+            <th>resource</th>
+            <th>line</th>
+            <th>name</th>
+            <th>geometry</th>
+            <th>documentation-url</th>
+            <th>start-date</th>
+            <th>geography</th>
+        </tr>
+    </thead>
+    <tbody>        <tr>
+            <td>2021-05-27</td>
+            <td><a href="https://github.com/digital-land/scheduled-monument-collection/tree/main/transformed/scheduled-monument/b892ee0eb89148fc140e3ea288c6fa175c4d6ecb936860e395bbcd33f35c1ba7.csv#L11779">b892ee0eb891...</a></td>
+            <td>11778</td>
+                <td>Byland Abbey Cistercian monastery: monastic precinct, water-management earthworks, enclosures, ancillary buildings and quarries</td> 
+                <td class="data-table__notes-cell data-table__cell--min-width-4">
+                    <details class="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      See WKT
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    MULTIPOLYGON (((-1.153253 54.204449,-1.153443 54.203763,-1.154588 54.203749,-1.155011 54.203641,-1.156395 54.203634,-1.156925 54.203663,-1.157237 54.203576,-1.157592 54.203610,-1.157647 54.203424,-1.157731 54.203273,-1.157767 54.203094,-1.157842 54.202955,-1.157836 54.202870,-1.157641 54.202775,-1.157302 54.202757,-1.157238 54.202708,-1.157123 54.202691,-1.156687 54.202674,-1.155997 54.202543,-1.154114 54.202053,-1.153554 54.202041,-1.153140 54.201987,-1.152621 54.201816,-1.152985 54.201010,-1.153404 54.200667,-1.153255 54.200557,-1.153196 54.200434,-1.153075 54.200313,-1.152728 54.200142,-1.152749 54.200041,-1.152605 54.199586,-1.151774 54.199511,-1.151991 54.198780,-1.151962 54.198731,-1.152589 54.198629,-1.152783 54.197935,-1.152895 54.197398,-1.151260 54.197229,-1.150396 54.197084,-1.149641 54.196883,-1.148606 54.196542,-1.148593 54.196474,-1.148662 54.196154,-1.148641 54.195991,-1.148709 54.195848,-1.148700 54.195480,-1.149862 54.195818,-1.150371 54.195926,-1.150735 54.196052,-1.151120 54.196086,-1.151987 54.196230,-1.152598 54.196245,-1.153068 54.196284,-1.153291 54.196337,-1.155277 54.196406,-1.155728 54.196482,-1.156080 54.196625,-1.156485 54.196849,-1.156419 54.196936,-1.156412 54.197006,-1.156271 54.197068,-1.156165 54.197238,-1.155813 54.197302,-1.155623 54.197411,-1.155429 54.197369,-1.155239 54.197456,-1.155141 54.197512,-1.155043 54.197680,-1.154820 54.197696,-1.154607 54.197808,-1.154521 54.197894,-1.154454 54.198074,-1.154899 54.198044,-1.154911 54.197987,-1.155348 54.197943,-1.155381 54.198174,-1.155537 54.198459,-1.155597 54.198677,-1.155738 54.198896,-1.155860 54.199257,-1.155902 54.199298,-1.156190 54.199967,-1.157469 54.200227,-1.158778 54.200595,-1.161350 54.201188,-1.161212 54.201502,-1.160938 54.202517,-1.160747 54.202642,-1.160480 54.202767,-1.160378 54.202785,-1.160297 54.202788,-1.160208 54.202626,-1.160184 54.203055,-1.160199 54.203485,-1.160119 54.203595,-1.159797 54.203773,-1.158977 54.204133,-1.158781 54.204214,-1.158728 54.204185,-1.158570 54.204257,-1.158607 54.204285,-1.158309 54.204391,-1.158028 54.204430,-1.155314 54.204367,-1.153253 54.204449),(-1.154785 54.198130,-1.154512 54.198159,-1.154400 54.198282,-1.154244 54.198321,-1.154153 54.198423,-1.154196 54.198488,-1.154459 54.198566,-1.154519 54.198842,-1.154655 54.198936,-1.154651 54.199006,-1.154588 54.199108,-1.154642 54.199185,-1.154609 54.199274,-1.154647 54.199560,-1.154779 54.199604,-1.155564 54.199666,-1.155719 54.199638,-1.155494 54.198999,-1.154901 54.198186,-1.154785 54.198130)),((-1.165449 54.205517,-1.163410 54.204740,-1.162423 54.204188,-1.162491 54.203993,-1.162829 54.204069,-1.162947 54.203932,-1.163041 54.203703,-1.162479 54.203565,-1.162378 54.203647,-1.161807 54.203445,-1.161713 54.203532,-1.161525 54.203592,-1.161282 54.203749,-1.160822 54.203606,-1.160902 54.203518,-1.160628 54.203439,-1.160644 54.203050,-1.160442 54.203029,-1.160492 54.202954,-1.160854 54.202777,-1.161701 54.202780,-1.162201 54.202543,-1.162274 54.202444,-1.161874 54.202462,-1.161243 54.202396,-1.161483 54.201433,-1.161661 54.201045,-1.162035 54.200534,-1.162530 54.200088,-1.163048 54.199760,-1.163185 54.199703,-1.163619 54.199701,-1.164070 54.199567,-1.164450 54.199699,-1.164675 54.199856,-1.164666 54.200031,-1.164733 54.200101,-1.164812 54.200355,-1.164955 54.200417,-1.164943 54.200585,-1.164987 54.200703,-1.164981 54.200778,-1.165060 54.200924,-1.165334 54.201142,-1.165750 54.201390,-1.165864 54.201425,-1.166063 54.201418,-1.166235 54.201507,-1.166537 54.201499,-1.166919 54.201571,-1.166634 54.203050,-1.164164 54.202572,-1.163739 54.204587,-1.164657 54.204982,-1.165357 54.205354,-1.165650 54.205473,-1.165749 54.205465,-1.166163 54.205220,-1.166061 54.205704,-1.165449 54.205517)),((-1.167071 54.206404,-1.166668 54.206416,-1.166385 54.206320,-1.166116 54.206273,-1.165883 54.206350,-1.165722 54.206280,-1.165568 54.206080,-1.165124 54.205950,-1.164763 54.205909,-1.163708 54.205989,-1.163133 54.206170,-1.163194 54.205845,-1.160141 54.205665,-1.159433 54.205734,-1.159351 54.205200,-1.158480 54.205277,-1.158309 54.204563,-1.159862 54.203928,-1.160198 54.203752,-1.160584 54.203699,-1.161819 54.204085,-1.161975 54.203963,-1.161888 54.203920,-1.161965 54.203867,-1.162256 54.204009,-1.162171 54.204063,-1.162071 54.204009,-1.161924 54.204122,-1.163145 54.204801,-1.163531 54.204966,-1.165706 54.205766,-1.166247 54.205918,-1.167987 54.206254,-1.167926 54.206562,-1.167987 54.206661,-1.168109 54.206715,-1.168112 54.206763,-1.167989 54.206854,-1.167915 54.206869,-1.167608 54.206812,-1.167200 54.206612,-1.167152 54.206434,-1.167071 54.206404)),((-1.152435 54.205036,-1.152481 54.204908,-1.152388 54.204793,-1.152402 54.204631,-1.154721 54.204512,-1.156379 54.204550,-1.156240 54.205384,-1.155208 54.205342,-1.155069 54.205541,-1.155050 54.205833,-1.154894 54.206137,-1.154890 54.206349,-1.154885 54.206366,-1.154805 54.206400,-1.154757 54.206360,-1.154771 54.206284,-1.154686 54.206214,-1.154671 54.206165,-1.154836 54.205987,-1.154919 54.205824,-1.154934 54.205726,-1.154841 54.205670,-1.154804 54.205581,-1.154993 54.205094,-1.154979 54.205058,-1.152559 54.205152,-1.152407 54.205406,-1.152227 54.205608,-1.152372 54.205771,-1.152421 54.205964,-1.152384 54.206124,-1.152209 54.206468,-1.152200 54.206672,-1.152036 54.206870,-1.151898 54.206950,-1.151808 54.206961,-1.151786 54.206946,-1.151810 54.206902,-1.151998 54.206780,-1.152094 54.206634,-1.152104 54.206386,-1.152207 54.206192,-1.152228 54.206083,-1.152203 54.205962,-1.152098 54.205765,-1.152090 54.205589,-1.152403 54.205238,-1.152442 54.205127,-1.152435 54.205036)))
+  </div>
+</details>
+                </td>
+                <td>https://historicengland.org.uk/listing/the-list/list-entry/1013403</td> 
+                <td>1992-07-20</td> 
+                <td>scheduled-monument:1013403</td> 
+        </tr>    </tbody>
+</table>
+
+    </div>
+    <div class="data-table-right-shadow visible with-transition"></div>
+</div>
+</div><div id="referenced-by">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h2 class="govuk-heading-m dlf-subnav__heading">Referenced by</h2>
+            <p class="govuk-body">This record is referenced by 0 other planning related data records.</p>
+</div>
+    </div>
+</div>
+        </main>
+      </div>
+
+    <div class="dlf-feedback__wrapper">
+    <div class="dlf-feedback">
+    <div class="dlf-feedback__prompt">
+        <div class="dlf-feedback__prompt-content">
+            <span class="dlf-feedback__prompt-content__text">Spotted an issue? Let us know so we can improve the data.</span>
+        </div>
+        <div class="dlf-feedback__prompt-action">
+            <a href="mailto:digitalLand@communities.gov.uk?subject=Feedback on (geography) Byland Abbey Cistercian monastery: monastic precinct, water-management earthworks, enclosures, ancillary buildings and quarries -- scheduled-monument" class="govuk-button dlf-feedback__prompt__link">There is something wrong with the data</a>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<footer class="govuk-footer " role="contentinfo"
+>
+  <div class="govuk-width-container ">
+    <div class="govuk-footer__meta">
+      <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+          <h2 class="govuk-visually-hidden">Support links</h2>              <ul class="govuk-footer__inline-list">
+                  <li class="govuk-footer__inline-list-item">
+                    <a class="govuk-footer__link" href="/cookies">
+                      Cookies
+                    </a>
+                  </li>
+                  <li class="govuk-footer__inline-list-item">
+                    <a class="govuk-footer__link" href="/accessibility-statement">
+                      Accessibility statement
+                    </a>
+                  </li>
+                  <li class="govuk-footer__inline-list-item">
+                    <a class="govuk-footer__link" href="/design-system">
+                      Design system
+                    </a>
+                  </li>
+              </ul>
+            <div class="govuk-footer__meta-custom">
+              The <a class="govuk-footer__link" href="https://github.com/digital-land/digital-land/">software</a> and <a class="govuk-footer__link" href="https://github.com/digital-land/digital-land/">data</a> used to build these pages is <a class="govuk-footer__link" href="https://github.com/digital-land/digital-land/blob/master/LICENSE">open source</a>.
+            </div>
+        <svg
+          role="presentation"
+          focusable="false"
+          class="govuk-footer__licence-logo"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 483.2 195.7"
+          height="17"
+          width="41"
+        >
+          <path
+            fill="currentColor"
+            d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+          />
+        </svg>
+        <span class="govuk-footer__licence-description">
+          All content is available under the
+          <a
+            class="govuk-footer__link"
+            href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+            rel="license"
+          >Open Government Licence v3.0</a>, except where otherwise stated
+        </span>
+      </div>
+      <div class="govuk-footer__meta-item">
+        <a
+          class="govuk-footer__link govuk-footer__copyright-logo"
+          href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+        >© Crown copyright</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://digital-land.github.io/javascripts/dl-cookies.js"></script>
+	<script async src='https://www.google-analytics.com/analytics.js'></script>
+	<!-- end google analytics -->
+
+	<script src="https://digital-land.github.io/javascripts/govuk/govuk-frontend.min.js"></script>
+	<script>
+		// initiate all GOVUK components
+		window.GOVUKFrontend.initAll();
+	</script>
+
+	<script src="https://digital-land.github.io/javascripts/dl-frontend.js"></script>
+	<script>
+		// adds any necessary polyfills
+		window.DLFrontend.polyfill();
+	</script>
+
+<script>
+    const datasetName = "scheduled-monument"
+    const $mapElement = document.querySelector('[data-module="boundary-map"]')
+    const $nationalMapLink = document.querySelector('.dl-link-national-map')
+    const mapComponent = new DLMaps.Map($mapElement).init({
+        initGeoJsonLoadCallback: function (urls, featureGroup) {
+            console.log("initial load completed")
+            // do we need to check there isn't more than one shape?
+            const center = featureGroup.getBounds().getCenter()
+            const zoom = mapComponent.map.getZoom()
+            let url = `http://digital-land.github.io/map?layer=${datasetName}#${center.lat},${center.lng},${zoom}z`
+            console.log(url)
+            if ($nationalMapLink) {
+                // only show this for the datasets we've added to the national map
+                $nationalMapLink.href = url
+                $nationalMapLink.classList.remove("js-hidden")
+            }
+        }
+    })
+</script>
+<script>
+    // Initialise back to top
+    var $data_tables = document.querySelectorAll('[data-module*="data-table"]')
+    $data_tables.forEach(data_table => {
+        new window.DLFrontend.ScrollableTables(data_table).init()
+    })
+</script>
+
+<script>
+    const $subNavTabs = document.querySelector('[data-module="dlf-subnav"]')
+    const subNavTabsComponent = new DLFrontend.SubNavTabs($subNavTabs).init({})
+</script>  </body>
+</html>
