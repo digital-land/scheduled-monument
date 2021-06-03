@@ -151,13 +151,13 @@ crossorigin="" />
 <div class="govuk-grid-row">    <div class="govuk-grid-column-two-thirds"><article class="data-record govuk-!-margin-bottom-6">
     <h4 class="govuk-heading-s data-record__identifier">#/scheduled-monument/1011422</h4>
     <dl class="govuk-summary-list data-record__properties">            <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">documentation-url
-            </dt>
-            <dd class="govuk-summary-list__value">                <a class="govuk-link" href="https://historicengland.org.uk/listing/the-list/list-entry/1011422">https://historicengland.org.uk/listing/the-list/list-entry/1011422</a>            </dd>
-        </div>        <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">start-date
             </dt>
             <dd class="govuk-summary-list__value">                1994-01-25            </dd>
+        </div>        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">documentation-url
+            </dt>
+            <dd class="govuk-summary-list__value">                <a class="govuk-link" href="https://historicengland.org.uk/listing/the-list/list-entry/1011422">https://historicengland.org.uk/listing/the-list/list-entry/1011422</a>            </dd>
         </div>        <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">geography
             </dt>
@@ -208,17 +208,20 @@ crossorigin="" />
             <th>entry-date</th>
             <th>resource</th>
             <th>line</th>
-            <th>geometry</th>
-            <th>geography</th>
-            <th>start-date</th>
-            <th>name</th>
             <th>documentation-url</th>
+            <th>geography</th>
+            <th>name</th>
+            <th>geometry</th>
+            <th>start-date</th>
         </tr>
     </thead>
     <tbody>        <tr>
             <td>2021-06-01</td>
             <td><a href="https://github.com/digital-land/scheduled-monument-collection/tree/main/transformed/scheduled-monument/744559005085faedcab9233979cdaea5706c010a5d38c0f5ae956e5f016adccb.csv#L9898">744559005085...</a></td>
             <td>9897</td>
+                <td>https://historicengland.org.uk/listing/the-list/list-entry/1011422</td> 
+                <td>scheduled-monument:1011422</td> 
+                <td>Romano-British farmstead, 550m north-west of Barrasford Park</td> 
                 <td class="data-table__notes-cell data-table__cell--min-width-4">
                     <details class="govuk-details">
   <summary class="govuk-details__summary">
@@ -231,10 +234,7 @@ crossorigin="" />
   </div>
 </details>
                 </td>
-                <td>scheduled-monument:1011422</td> 
                 <td>1994-01-25</td> 
-                <td>Romano-British farmstead, 550m north-west of Barrasford Park</td> 
-                <td>https://historicengland.org.uk/listing/the-list/list-entry/1011422</td> 
         </tr>    </tbody>
 </table>
 
@@ -344,7 +344,7 @@ crossorigin="" />
     const $mapElement = document.querySelector('[data-module="boundary-map"]')
     const $nationalMapLink = document.querySelector('.dl-link-national-map')
     const mapComponent = new DLMaps.Map($mapElement).init({
-        initGeoJsonLoadCallback: function (urls, featureGroup) {
+        initZoomCallback: function (featureGroup) {
             console.log("initial load completed")
             // do we need to check there isn't more than one shape?
             const center = featureGroup.getBounds().getCenter()
